@@ -70,4 +70,4 @@ cat >> /var/ossec/etc/ossec.conf << EOF
 
 </ossec_config>
 EOF
-
+sudo systemctl restart wazuh-agent
