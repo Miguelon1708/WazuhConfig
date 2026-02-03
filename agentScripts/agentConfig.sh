@@ -70,4 +70,4 @@ cat >> /home/wazuh/test/hola.sh << EOF
 
 </ossec_config>
 EOF
-
+sudo systemctl restart wazuh-agent
