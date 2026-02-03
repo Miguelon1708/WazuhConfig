@@ -1,2 +1,5 @@
 # WazuhConfig
-A pre-configured version of Wazuh
+A pre-configured version of Wazuh.
+
+Project structure:
+
