@@ -27,3 +27,5 @@ fi;
 sudo systemctl daemon-reload
 sudo systemctl enable wazuh-agent
 sudo systemctl start wazuh-agent
+
+mv sshDetection.sh diskActivity.sh net_analysis.sh /home/wazuh

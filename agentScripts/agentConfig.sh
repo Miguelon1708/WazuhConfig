@@ -5,7 +5,7 @@ echo "Introduce el nombre de la interfaz de red a monitorizar: "
 read interfaz
 disco=$(lsblk | awk '$NF == "/" {print $1}' | sed 's/[^a-zA-Z0-9]//g')
 
-cat >> /home/wazuh/test/hola.sh << EOF
+cat >> /var/ossec/etc/ossec.conf << EOF
 <ossec_config>
 
   <!-- CPU, memory, disk metric -->
