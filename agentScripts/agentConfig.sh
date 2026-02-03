@@ -46,7 +46,7 @@ cat >> /var/ossec/etc/ossec.conf << EOF
 
   <localfile>
      <log_format>full_command</log_format>
-     <command>/home/wazuh/script.sh wazuh localhost</command>
+     <command>/home/wazuh/sshDetection.sh wazuh localhost</command>
      <alias>ssh_test_command</alias>
      <out_format>\$(timestamp) \$(hostname) ssh_test: \$(log)</out_format>
      <frequency>60</frequency>
