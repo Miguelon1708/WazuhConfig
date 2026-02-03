@@ -2,7 +2,7 @@
 A pre-configured version of Wazuh.
 
 ## Project structure:
-
+```
 WazuhConfig/
 ├── agentScripts
 │   ├── agentConfig.sh
@@ -12,3 +12,4 @@ WazuhConfig/
 │   └── sshDetection.sh
 ├── LICENSE
 └── README.md
+```
