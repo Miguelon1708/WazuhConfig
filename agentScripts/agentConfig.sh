@@ -54,7 +54,7 @@ cat >> /var/ossec/etc/ossec.conf << EOF
 
   <localfile>
      <log_format>full_command</log_format>
-     <command>/home/wazuh/disk_act.h $disco 1 20</command>
+     <command>/home/wazuh/diskActivity.sh $disco 1 20</command>
      <alias>disk_activity</alias>
      <out_format>\$(timestamp) \$(hostname) disk_activity: \$(log)</out_format>
      <frequency>60</frequency>
