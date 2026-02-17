@@ -102,11 +102,44 @@ Finally, run the configuration script `agentConfig.sh`.
 
 ## More configuration options
 
-### Manager config options add here
+### Manager configuration options
 
 #### Email alerts
+It is possible to send email alerts as a response to some important security events. In this [link](https://wazuh.com/blog/how-to-send-email-notifications-with-wazuh/), it is shown how to quickly set up email alerts using Postfix as a server relay.
 
-#### add more
+#### Blacklisting, whitelisting, time-ranged logins
+In the "Agent control" Dashboard, there are multiple empty bar graphs that show different things. Wazuh allows to set up blacklists, whitelists and a time range in which, if anyone logs into a monitored server, a security alert will pop up.
+
+link para usarlas
+para blacklisting, vale con `/var/ossec/etc/lists/malicious-ioc/malicious-ip`
+para whitelisting, se recomienda crear la lista wltest, pues ya existe una regla que la analiza.
+para time-ranged ... ya está configurado, se puede cambiar en la regla del local local_rules.xml
+
+#### Last time alive check
+In the "Agent control" Dashboard there is also a large graph that displays the last time a monitored server reported that it was active. To get this functionality to work, you need to use the `checkStatus.sh` script, and configure some things in it:
+
+- Change the files commented with `#CONFIGURE 1` to the file where you want the script to write its logs.
+- Change the files commented with `#CONFIGURE 2` to the file that contains the IP directions that you want to track.
+- Add the following lines into the last `<ossec_config>` section of the `/var/ossec/etc/ossec.conf` 
+```
+  <localfile>
+    <log_format>syslog</log_format>
+    <location>/home/admin/tools/status/monitored_ips</location> #CONFIGURE 2
+  </localfile>
+```
+- For the script to work correctly, it must be executed by a user whose SSH keys are trusted by the servers being monitored.
+- Add the following lines into the last `<ossec_config>` section of the `/var/ossec/etc/ossec.conf`
+```
+  <localfile>
+    <log_format>full_command</log_format>
+    <command>sudo -u wazuh /home/admin/tools/status/checkStatus.sh</command>
+    <frequency>900</frequency>
+  </localfile>
+```
+And change the command to the path of the configured script. The user executing the command must be the one whose keys trusted by the servers being monitored.
+
+#### AI command analysis
+This functionality is currently under development.
 
 ### Agent configuration options
 
