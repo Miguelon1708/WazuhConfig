@@ -46,7 +46,9 @@ sudo ./managerConfig.sh
 ```
 
 Then, just run the second configuration script, which configures the local rules and decoders.
-`sudo ./managerRulesDecoders.sh`
+```
+sudo ./managerRulesDecoders.sh
+```
 
 And finally, to avoid conflicts regarding variable types, it is necessary to reindex some files. In the Dashboard's upper left menu (the same used in the previous steps to import the dashboards object), go to `Indexer Management -> Dev tools` and paste the next lines, **changing "yyyy.mm.dd"** to the current date with the same format (Example: 2026.03.25). Then, run each chunk of code.
 ```
