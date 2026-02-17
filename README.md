@@ -22,7 +22,18 @@ The agent installation must be performed on a Linux endpoint (DEB/RPM) using the
 ## Installation
 
 ### Manager Installation
-[Add instructions here on how to install the manager]
+
+Before installing the agents, it is necessary to install the Wazuh Manager central components: Server, Indexer and Dashboard. This project covers the All-in-one installation.
+
+The first thing that you should do is simply install the default central components, using the command below.
+It is public in the Wazuh *quickstart* page.
+```bash
+curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
+```
+While it is installing, you can continue by downloading the file `managerFiles/dashboards.ndjson` on the computer where you are going to access the Wazuh Dashboard. It is important that you **download** it and don't use the *save as...* option, to avoid corrupting the file. 
+
+<img width="1899" height="664" alt="image" src="https://github.com/user-attachments/assets/0c2e3c58-b03a-4ef0-87c1-b527b0d3eeae" />
+
 
 ### Agent Installation
 Once the manager has been installed successfully, you can install the Agent on your Linux endpoint (DEB/RPM). To install it, navigate to the `agentScripts` folder and run this command to make the files executable:
