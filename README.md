@@ -1,6 +1,6 @@
 # WazuhConfig
 
-A pre-configured version of Wazuh for Linux endpoints.
+A pre-configured Wazuh environment for Linux endpoints.
 
 ## Project Structure (update when finished)
 ```
@@ -25,17 +25,17 @@ The agent installation must be performed on a Linux endpoint (DEB/RPM) using the
 
 Before installing the agents, it is necessary to install the Wazuh Manager central components: Server, Indexer and Dashboard. This project covers the All-in-one installation.
 
-The first thing that you should do is simply install the default central components, using the command below.
-It is public in the Wazuh *quickstart* page.
+First, install the default central components using the command below.
+It is provided in the Wazuh *quickstart* page.
 ```bash
 curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
 ```
-While it is installing, you can continue by downloading the file `managerFiles/dashboards.ndjson` on the computer where you are going to access the Wazuh Dashboard. It is important that you **download** it and don't use the *save as...* option, to avoid corrupting the file. 
+While the installation is running, you can continue by downloading the file `managerFiles/dashboards.ndjson` on the computer where you are going to access the Wazuh Dashboard. It is important that you **download** it and don't use the *Save As...* option, to avoid corrupting the file. 
 
 <img width="1899" height="664" alt="image" src="https://github.com/user-attachments/assets/0c2e3c58-b03a-4ef0-87c1-b527b0d3eeae" />
 
 Once the manager finished the installation, the program will give you the credentials to access the Wazuh Dashboard. There, open the upper left corner menu and navigate to `Dashboard management -> Dashboards management -> Saved objects`and click on *import* and *Check for existing objects -> Request action on conflict*.
-If there is any conflict, just choose *Overwrite*.
+If there is any conflict, choose *Overwrite*.
 
 The next step is running the variable configuration script to make Wazuh recognize the variable types in the Dashboard.
 
@@ -77,6 +77,7 @@ DELETE /wazuh-alerts-4.x-backup
 GET /wazuh-alerts-4.x-yyyy.mm.dd
 
 ```
+And with this, the installation should be complete. Go to `Dashboards management -> Index Patterns -> wazuh-alerts-` and search for the variable `recibidos`. If the type is 'number', it is correct. If you experience any errors later in the dashboards visualizations, repeat the re-indexing step and reload the `wazuh-alerts-` index with clicking the icon on the upper right corner.
 
 
 ### Agent Installation
