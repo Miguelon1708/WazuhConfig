@@ -12,6 +12,7 @@ WazuhConfig/
 │   ├── agentInstall.sh
 │   └── wazuh-agent_4.13.1-1_amd64.deb
 └── managerFiles
+    ├── checkStatus.sh
     ├── dashboards.ndjson
     ├── managerConfig.sh
     ├── managerRulesDecoders.sh
