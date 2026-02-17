@@ -2,7 +2,7 @@
 
 A pre-configured Wazuh environment for Linux endpoints.
 
-## Project Structure (update when finished)
+## Project Structure
 ```
 WazuhConfig/
 ├── LICENSE
