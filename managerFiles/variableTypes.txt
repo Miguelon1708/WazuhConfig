@@ -1,0 +1,43 @@
+		"1min_loadAverage": {
+                	 "type": "double"
+              	 },
+        	 "5mins_loadAverage": {
+                	 "type": "double"
+              	 },
+        	 "15mins_loadAverage": {
+                	 "type": "double"
+              	 },
+		 "cpu_usage_%": {
+			 "type": "double"
+              	 },
+         	"memory_usage_%": {
+                	 "type": "double"
+               	 },
+         	"memory_available_bytes": {
+                	 "type": "double"
+               	},
+         	"memory_used_bytes": {
+                 	 "type":  "double"
+               	},
+         	"disk_used_bytes": {
+                	 "type": "double"
+              	 },
+         	"disk_free_bytes": {
+                	 "type": "double"
+              	 },
+         	"disk_usage_%": {
+                	 "type": "double"
+             	 },
+         	"read_kb": {
+                	 "type": "double"
+              	 },
+        	 "write_kb": {
+                	 "type": "double"
+              	 },
+        	 "transmitidos_kb": {
+                	 "type": "double"
+              	 },
+        	 "recibidos_kb": {
+                	 "type": "double"
+              	 },
+
