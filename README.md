@@ -5,14 +5,17 @@ A pre-configured Wazuh environment for Linux endpoints.
 ## Project Structure (update when finished)
 ```
 WazuhConfig/
-├── agentScripts/
+├── LICENSE
+├── README.md
+├── agentScripts
 │   ├── agentConfig.sh
 │   ├── agentInstall.sh
-│   ├── diskActivity.sh
-│   ├── net_analysis.sh
-│   └── sshDetection.sh
-├── LICENSE
-└── README.md
+│   └── wazuh-agent_4.13.1-1_amd64.deb
+└── managerFiles
+    ├── dashboards.ndjson
+    ├── managerConfig.sh
+    ├── managerRulesDecoders.sh
+    └── variableTypes.txt
 ```
 
 ## Requirements
