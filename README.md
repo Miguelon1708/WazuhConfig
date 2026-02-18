@@ -148,3 +148,6 @@ After running the configuration script, there are still a lot of things that you
 #### File Integrity Monitoring
 The File Integrity Monitoring (FIM) is a really useful tool that allows you to keep track of the changes on files inside a directory.
 [Explain how to change the ossec.conf file]
+
+<img width="979" height="353" alt="image" src="https://github.com/user-attachments/assets/ff2b5dd9-4fe1-4b3f-8344-2b12171e3e36" />
+
