@@ -113,7 +113,7 @@ In the "Agent control" Dashboard, there are multiple empty bar graphs that show 
 In this [link](https://documentation.wazuh.com/current/user-manual/ruleset/cdb-list.html) there is a step-by-step tutorial of how to use those lists. However, here are some recomendations:
 - For IP blacklisting, just use the `/var/ossec/etc/lists/malicious-ioc/malicious-ip` list, it is not necessary to crete a new one.
 - For IP whitelisting, it is recommended to create a list called `wltest`, since there is already a local rule that tracks that list.
-- Time ranged logins are already configured in the `local_rules.xml file` (rule 100102). The hour limits are configurable.
+- Time ranged logins are already configured in the `local_rules.xml` file (rule 100102). The hour limits are configurable.
 
 #### Last time alive check
 In the "Agent control" Dashboard there is also a large graph that displays the last time a monitored server reported that it was active. To get this functionality to work, you need to use the `checkStatus.sh` script, and configure some things in it:
