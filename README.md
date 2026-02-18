@@ -110,10 +110,10 @@ It is possible to send email alerts as a response to some important security eve
 #### Blacklisting, whitelisting, time-ranged logins
 In the "Agent control" Dashboard, there are multiple empty bar graphs that show different things. Wazuh allows to set up blacklists, whitelists and a time range in which, if anyone logs into a monitored server, a security alert will pop up.
 
-link para usarlas
-para blacklisting, vale con `/var/ossec/etc/lists/malicious-ioc/malicious-ip`
-para whitelisting, se recomienda crear la lista wltest, pues ya existe una regla que la analiza.
-para time-ranged ... ya está configurado, se puede cambiar en la regla del local local_rules.xml
+In this [link](https://documentation.wazuh.com/current/user-manual/ruleset/cdb-list.html) there is a step-by-step tutorial of how to use those lists. However, here are some recomendations:
+- For IP blacklisting, just use the `/var/ossec/etc/lists/malicious-ioc/malicious-ip` list, it is not necessary to crete a new one.
+- For IP whitelisting, it is recommended to create a list called `wltest`, since there is already a local rule that tracks that list.
+- Time ranged logins are already configured in the `local_rules.xml file` (rule 100102). The hour limits are configurable.
 
 #### Last time alive check
 In the "Agent control" Dashboard there is also a large graph that displays the last time a monitored server reported that it was active. To get this functionality to work, you need to use the `checkStatus.sh` script, and configure some things in it:
