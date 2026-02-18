@@ -150,4 +150,8 @@ The File Integrity Monitoring (FIM) is a really useful tool that allows you to k
 To do that, go to `/var/ossec/etc/ossec.conf` and add the path that you want to keep track of inside of a `<directories>` tag, like in the image below.
 
 <img width="979" height="353" alt="image" src="https://github.com/user-attachments/assets/ff2b5dd9-4fe1-4b3f-8344-2b12171e3e36" />
+Finally, restart the agent:
+```
+systemctl restart wazuh-agent
+```
 
