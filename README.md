@@ -143,7 +143,7 @@ This functionality is currently under development.
 
 ### Agent configuration options
 
-After running the configuration script, there are still a lot of things that you can set up to achieve the configuration that best fits your needs.
+After running the configuration script, there are some things that you can set up to achieve the configuration that best fits your needs.
 
 #### File Integrity Monitoring
 The File Integrity Monitoring (FIM) is a really useful tool that allows you to keep track of the changes on files inside a directory.
